@@ -41,15 +41,26 @@ class NotificationController extends Controller
                 'employee_code' =>$request->employee_code,
             );
             $sql = '';
-            foreach ($dataarr as $key => $item) {
+            // foreach ($dataarr as $key => $item) {
     
+            //     if($dataarr[$key]){
+    
+            //         $sql .= $key . ' Like ' . "'%" .$dataarr[$key] .  "%' and";
+            //     }
+            // }
+            // $last3char = substr($sql, -3);
+            // if(strtolower($last3char) == 'and'){
+            //     $sql = substr_replace($sql ,"",-3);
+            // }
+            foreach ($dataarr as $key => $item) {
+
                 if($dataarr[$key]){
     
-                    $sql .= $key . ' Like ' . "'%" .$dataarr[$key] .  "%' and";
+                    $sql .= $key . ' Like ' . "'%" .$dataarr[$key] .  "%' or ";
                 }
             }
             $last3char = substr($sql, -3);
-            if(strtolower($last3char) == 'and'){
+            if(strtolower($last3char) == 'or '){
                 $sql = substr_replace($sql ,"",-3);
             }
             if($sql != ""){

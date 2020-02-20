@@ -15,6 +15,7 @@ Route::get('/', function () {
     return redirect('home/');
 });
 
+
 //Add new Employee
 Route::get('/employees', 'EmployeesController@index')->name('employees.index');
 Route::post('/employees/search', 'EmployeesController@search')->name('employees.search');

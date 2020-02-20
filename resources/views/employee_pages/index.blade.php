@@ -1,7 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
-
+{{-- 
+<h1>{{$query}}</h1> --}}
 
 <div class="container mb-5">
     <div class="row justify-content-center">

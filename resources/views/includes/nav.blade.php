@@ -7,8 +7,8 @@
                         <div class="row align-items-center">
                             @if(!(Auth::user()->Djv_Group === 'admin' || Auth::user()->Djv_Group === 'TopManager'|| Auth::user()->Djv_Group === 'hr'))
 
-                            <div class="col-xl-1 ml-2">
-                                <div style="margin-left: 730%" class="logo">
+                            <div >
+                                <div style="margin-left:600%" class="logo">
                                     <a href="{{url("home")}}">
                                         <img width="100" height="70" src="{{asset('storage/logos/logo.png')}}" alt="dejavu logo">
                                     </a>
@@ -73,12 +73,12 @@
                                          <!-- User profile and search -->
                     <!-- ============================================================== -->
                     @if(!(Auth::user()->Djv_Group === 'admin' || Auth::user()->Djv_Group === 'TopManager'|| Auth::user()->Djv_Group === 'hr'))
-                    <li style="float: right;margin-right: 100px; margin-bottom: 50px" class="nav-item dropdown">
+                    <li style="float: right; margin-bottom: 20px" class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="index.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="{{asset('storage/EmployeeProfileImages/'. Auth::user()->user_pp)}}" alt="user" class="rounded-circle" width="100" height="50">
                         <span class="ml-2 user-text font-medium">{{Auth::user()->name}}</span>
                         </a>
-                        <div style="left: -130px"  class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                        <div  class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
                             <div class="d-flex no-block align-items-center p-3 mb-2 border-bottom">
                                 <div class=""><img src="{{asset('storage/EmployeeProfileImages/'. Auth::user()->user_pp)}}" alt="user" class="rounded" width="80"></div>
                                 <div class="ml-2">
@@ -140,7 +140,7 @@
                                 <img src="{{asset('storage/EmployeeProfileImages/'. Auth::user()->user_pp)}}" alt="user" class="rounded-circle" width="100" height="60">
                             <span class="ml-2 user-text font-medium">{{Auth::user()->name}}</span>
                             </a>
-                            <div style="left: -130px;margin-right: 70px; margin-bottom: 50px" class="dropdown-menu  user-dd animated flipInY">
+                            <div  class="dropdown-menu  user-dd animated flipInY">
                                 <div class="d-flex no-block align-items-center p-3 mb-2 border-bottom">
                                     <div class=""><img src="{{asset('storage/EmployeeProfileImages/'. Auth::user()->user_pp)}}" alt="user" class="rounded" width="80"></div>
                                     <div class="ml-2">

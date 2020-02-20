@@ -45,11 +45,11 @@ class EmployeesController extends Controller
 
             if($dataarr[$key]){
 
-                $sql .= $key . ' Like ' . "'%" .$dataarr[$key] .  "%' and";
+                $sql .= $key . ' Like ' . "'%" .$dataarr[$key] .  "%' or ";
             }
         }
         $last3char = substr($sql, -3);
-        if(strtolower($last3char) == 'and'){
+        if(strtolower($last3char) == 'or '){
             $sql = substr_replace($sql ,"",-3);
         }
         if($sql != ""){
